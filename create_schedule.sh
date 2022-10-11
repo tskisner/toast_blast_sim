@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# # Just for fun, picking g284
-# target_ra=156.0146
-# target_dec=-57.9263
-# target_width=5.0
-
 # Just for fun, picking B2K deep field
 target_ra=82.0
 target_dec=-45.0

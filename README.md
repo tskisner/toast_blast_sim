@@ -136,22 +136,27 @@ that is merged.
 ### Fake Focalplane
 
 Use the `create_focalplane.sh` script to generate an HDF5 file with the generic
-toast focalplane format. Adjust pixel count to be the minimum required and a
-full hex-packed layout (with at least that many pixels) will be created. Adjust
-the noise spectral properties as needed.
+toast focalplane format. This calls [a script that is installed with
+toast](https://github.com/hpc4cmb/toast/blob/toast3/src/toast/scripts/toast_fake_focalplane.py).
+Adjust pixel count to be the minimum required and a full hex-packed layout
+(with at least that many pixels) will be created. Adjust the noise spectral
+properties as needed.
 
 ### Fake Schedule
 
 Use the `create_schedule.sh` script to generate a schedule file. The patch
 specification used can be either center / width or all 4 corners in RA/DEC.
+There are [many options
+available](https://github.com/hpc4cmb/toast/blob/8f52b00acb95199e31c9b5543e08a461c302b37f/src/toast/schedule_sim_ground.py#L2243).
 
 ### Running the Workflow
 
-This uses the "example" ground workflow from the toast package. That workflow
-has many operations that we don't need for this exercise and which we can
-enable / disable from the command line. This script assumes running on a
-generic system with MPI. If you are using a cluster or HPC machine that has a
-scheduler (e.g. slurm), then you will need to set up a batch job script.
+The `run_sim.sh` script uses the "example" ground workflow from the toast
+package. That workflow has many operations that we don't need for this exercise
+and which we can enable / disable from the command line. This script assumes
+running on a generic system with MPI. If you are using a cluster or HPC machine
+that has a scheduler (e.g. slurm), then you will need to set up a batch job
+script.
 
 There are further changes needed if you are scanning a map for sky signal in
 the sim. Will add more notes here...
