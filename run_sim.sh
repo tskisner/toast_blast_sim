@@ -56,8 +56,8 @@ mpirun -np ${mpi_procs} toast_sim_ground.py \
 --pixels_healpix_radec.disable \
 --pixels_healpix_radec.nside 2048 \
 --pixels_wcs_radec.enable \
---pixels_wcs_radec.auto_bounds \
---pixels_wcs_radec.projection "TAN" \
+`#--pixels_wcs_radec.auto_bounds` \
+--pixels_wcs_radec.projection "CAR" \
 --pixels_wcs_radec.resolution "(0.05 deg, 0.05 deg)" \
 `# Mapmaking params` \
 --mapmaker.iter_max 100 `# only used if templates enabled` \

@@ -19,7 +19,7 @@ toast_ground_schedule \
 --sun-avoidance-angle-deg 45 \
 --moon-avoidance-angle-deg 45 \
 --start "2023-01-01 00:00:00" \
---stop "2023-01-14 00:00:00" \
+--stop "2023-01-02 00:00:00" \
 --gap-s 300 \
 --ces-max-time-s 1200 \
 --fp-radius-deg 5.0 \
